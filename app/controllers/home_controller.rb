@@ -4,4 +4,9 @@ class HomeController < ApplicationController
 
   end
 
+  def sobre
+
+  end
+
+
 end

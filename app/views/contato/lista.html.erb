@@ -1,0 +1,51 @@
+<style>
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+  </style>
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5" style="text-align: center;">
+      <div class="col-lg-6 col-md-8 mx-auto" style="float: none; display: inline-block; ">
+        <h1 class="fw-light">Lista de contactos</h1>
+
+      </div>
+    </div>
+  </section>
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mensagem</th>
+      <th scope="col">Data de Criação</th>
+      <th scope="col">Data de Atualização</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Linha 1 -->
+    <% @contatos.each do |contato| %>
+    <tr>
+      <td><%= contato.nome %></td>
+      <td><%= contato.email %></td>
+      <td><%= contato.message %></td>
+      <td>2021-09-01 10:00:00</td>
+      <td>2021-09-01 12:30:00</td>
+    </tr>
+    <% end %>
+    <!-- Adicione mais linhas conforme necessário -->
+  </tbody>
+</table>
+
