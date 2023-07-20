@@ -21,7 +21,7 @@ const excluir = async (url) => {
         try {
             const token = document.querySelector("meta[name='csrf-token']").content;
             const urlWithToken = `${url}?authenticity_token=${encodeURIComponent(token)}`;
-            const response = await fetch(urlWithToken, { method: 'DELETE'});
+            const response = await fetch(urlWithToken, { method: 'DELETE' });
             if(response.ok){
                 window.location.reload()
             }else {
@@ -32,3 +32,36 @@ const excluir = async (url) => {
         }
     }
 }
+
+
+const atualizar = async (event) => {
+        try {
+            event.preventDefault();
+            const form = event.target
+
+            const url = form.action;
+            const formData = new FormData(form);
+
+            const body = {};
+            formData.forEach((value, key) => {
+                body[key] = value;
+            });
+
+            const response = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            });
+
+            if (response.ok){
+                console.log('contacto actualizado com sucesso');
+                window.location.href = "/contatos"
+            } else {
+                alert('erro ao atualizar o contato');
+            }
+        } catch (error) {
+            alert('Ocorreu um erro na requisição' + error.message);s
+        }
+    };
