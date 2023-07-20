@@ -1,5 +1,6 @@
 class BancosController < ApplicationController
   before_action :set_banco, only: %i[ show edit update destroy ]
+  before_action :log_params, only: %i[ create update ]
 
   # GET /bancos or /bancos.json
   def index
@@ -67,4 +68,10 @@ class BancosController < ApplicationController
     def banco_params
       params.require(:banco).permit(:nome, :email, :sigla, :morada, :telefone, :web_site)
     end
+
+  def log_params
+    puts "=========================================================================================="
+    puts "Parâmetros do formulário: #{params.inspect}"
+    puts "=========================================================================================="
+  end
 end

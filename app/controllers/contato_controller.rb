@@ -54,6 +54,7 @@ class ContatoController < ApplicationController
     end
 
     @contato.save!
+
     flash["sucess"] = "Contato atualizado com sucesso"
     render json: @contato.to_json, status: 200
   end
