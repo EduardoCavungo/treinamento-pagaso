@@ -6,5 +6,10 @@ Rails.application.routes.draw do
   get "contato", to: "contato#index"
   get "contatos", to: "contato#lista"
   post "contato/cadastrar", to: "contato#cadastrar"
+  get "contato/:id/editar", to: "contato#editar"
+  post "contato/:id/atualizar", to: "contato#atualizar"
+  #get "contato/:id/excluir", to: "contato#excluir"
+
+  delete "contato/:id/excluir", to: "contato#excluir"
 
 end

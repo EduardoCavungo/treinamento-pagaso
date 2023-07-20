@@ -19,8 +19,11 @@
     <div class="row py-lg-5" style="text-align: center;">
       <div class="col-lg-6 col-md-8 mx-auto" style="float: none; display: inline-block; ">
         <h1 class="fw-light">Lista de contactos</h1>
-
       </div>
+
+      <br>
+
+      <a href="/contato" class="btn btn-primary">Novo</a>
     </div>
   </section>
 
@@ -32,6 +35,7 @@
       <th scope="col">Mensagem</th>
       <th scope="col">Data de Criação</th>
       <th scope="col">Data de Atualização</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -43,6 +47,8 @@
       <td><%= contato.message %></td>
       <td>2021-09-01 10:00:00</td>
       <td>2021-09-01 12:30:00</td>
+      <td> <a href="/contato/<%= contato.id %>/editar" class="btn btn-warning"> Editar <a/></td>
+      <td> <a href="#" onclick="excluir('/contato/<%= contato.id %>/excluir')" class="btn btn-danger"> Excluir <a/></td>
     </tr>
     <% end %>
     <!-- Adicione mais linhas conforme necessário -->
