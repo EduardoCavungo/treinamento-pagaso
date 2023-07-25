@@ -4,8 +4,8 @@ class BancosController < ApplicationController
 
   # GET /bancos or /bancos.json
   def index
-    @bancos = Banco.all
-    @bancos = @bancos.where("lower(nome) like ?", "%#{params[:nome].downcase}%") if params[:nome].present?
+    @bancos = Banco.busca_por_parametro(params)
+    #@bancos = @bancos.where("lower(nome) like ?", "%#{params[:nome].downcase}%") if params[:nome].present?
   end
 
   # GET /bancos/1 or /bancos/1.json
