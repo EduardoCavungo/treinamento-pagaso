@@ -6,6 +6,57 @@
   <h1>Listing bancos</h1>
 </div>
 
+<div>
+  <form class="form-horizontal" action="/alunos" accept-charset="UTF-8" method="get">
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="banco_nome">Nome</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="nome" id="banco_nome">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="banco_email">Email</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="email" id="banco_email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="banco_sigla">Sigla</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="sigla" id="banco_sigla">
+      </div>
+    </div>
+
+      <div class="form-group">
+      <label class="col-sm-1 control-label" for="banco_morada">Morada</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="morada" id="banco_morada">
+      </div>
+    </div>
+
+      <div class="form-group">
+      <label class="col-sm-1 control-label" for="banco_telefone">Telefone</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="telefone" id="banco_telefone">
+      </div>
+    </div>
+
+      <div class="form-group">
+      <label class="col-sm-1 control-label" for="banco_web_site">Web Site</label>
+      <div class="col-sm-6">
+        <input class="form-control" type="text" name="web_site" id="banco_web_site">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-12" style="text-align:right">
+        <input type="submit" value="Buscar" class="btn btn-primary" data-disable-with="Create Aluno">
+      </div>
+    </div>
+  </form>
+</div>
+
+
 <div class="table-responsive">
   <table class="table table-striped table-bordered table-hover">
     <thead>
